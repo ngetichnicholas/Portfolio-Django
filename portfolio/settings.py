@@ -15,11 +15,11 @@ import cloudinary
 import cloudinary.uploader
 import cloudinary.api
 
-cloudinary.config( 
-  cloud_name = "dbos9xidr", 
-  api_key = "928959943118794", 
-  api_secret = "6_BMOJktqtDlv05ntKqjkRRnodY",
-  secure = True
+cloudinary.config(
+    cloud_name = config('CLOUD_NAME'),
+    api_key=config('API_KEY'), 
+    api_secret=config('API_SECRET'),
+    secure = config('SECURE'),
 )
 
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
