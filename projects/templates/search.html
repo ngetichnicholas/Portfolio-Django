@@ -19,10 +19,10 @@
       <div class="col-md-2"></div>
       <!-- displaying projects projects -->
       <div class="col-md-8">
-        <h2 class="text-success">{{ project.title }}</h2>
+        <a href="{% url 'projects_item.detail' projects_item.id %}"><h2 class="text-success">{{ project.title }}</h2></a>
         <p>{{ project.description}}</p>
         <!--Display projects project images  -->
-        <img src="{{project.project_image.url}}" class="img-responsive" alt="Image">
+        <a href="{% url 'projects_item.detail' projects_item.id %}"><img src="{{project.project_image.url}}" class="img-responsive" alt="Image"></a>
       </div>
       <div class="col-md-2"></div>
     </div>
