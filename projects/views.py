@@ -1,4 +1,4 @@
-from django.shortcuts import render,redirect
+from django.shortcuts import get_object_or_404, render,redirect
 from django.http import HttpResponse, Http404
 import datetime as dt
 from .models import Project
@@ -9,12 +9,12 @@ def home(requst):
   return render(requst, 'index.html')
 
 def projects(request):
-  projects = Project.get_projects()
+  projects = Project.objects.all().order_by("-published_on")
   return render(request, 'projects.html', {'projects':projects})
 
-def project(request,id):
+def detail(request,project_id):
   try:
-    project = Project.objects.get(id = id).first()
+    project = get_object_or_404(Project, pk = project_id)
   except ObjectDoesNotExist:
     raise Http404()
   return render(request, 'project.html', {'project':project})
