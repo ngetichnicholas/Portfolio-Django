@@ -25,3 +25,7 @@ a {
   opacity: 0.7;
   background-color: #295168;
 }
+.link:hover {
+  color: blue;
+  font-weight: 900;
+}

@@ -11,7 +11,7 @@
     <div class="col-md-2"></div>
     <!-- displaying projects projects -->
     <div class="col-md-8">
-      <a href="{% url 'projects_item.detail' projects_item.id %}"><h2 class="text-success">{{ projects_item.title }}</h2></a>
+      <a href="{% url 'projects_item.detail' projects_item.id %}" class=""><h2 class="text-success link">{{ projects_item.title }}</h2></a>
       <p>{{ projects_item.description}}</p>
       <!--Display projects project images  -->
       <a href="{% url 'projects_item.detail' projects_item.id %}" class="open-project"><img src="{{projects_item.project_image.url}}" class="img-responsive" alt="Image"></a>
