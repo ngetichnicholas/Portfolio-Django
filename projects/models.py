@@ -28,8 +28,8 @@ class Project(models.Model):
       return self.title
 
   @classmethod
-  def get_projects():
-    all_projects = Project.objects.all().order_by(Project.published_on.desc())
+  def get_projects(cls):
+    all_projects = cls.objects.all()
     return all_projects
 
   @classmethod
