@@ -45,7 +45,8 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'projects',
-    'bootstrap3'
+    'bootstrap3',
+    'cloudinary',
 ]
 
 MIDDLEWARE = [
