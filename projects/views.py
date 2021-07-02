@@ -9,3 +9,4 @@ def home(requst):
 
 def projects(request):
   projects = Project.get_projects()
+  return render(request, 'projects.html', {'projects':projects})
