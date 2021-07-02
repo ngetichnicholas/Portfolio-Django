@@ -12,9 +12,9 @@ def projects(request):
   projects = Project.get_projects()
   return render(request, 'projects.html', {'projects':projects})
 
-def project(request,project_id):
+def project(request,id):
   try:
-    project = Project.objects.get(id = project_id)
+    project = Project.objects.get(id = id).first()
   except ObjectDoesNotExist:
     raise Http404()
   return render(request, 'project.html', {'project':project})

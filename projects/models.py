@@ -1,5 +1,7 @@
 from django.db import models
 import datetime as dt
+from cloudinary.models import CloudinaryField
+
 
 # Create your models here.
 class Author(models.Model):
@@ -22,7 +24,7 @@ class Project(models.Model):
   description  = models.TextField()
   author = models.ForeignKey(Author,on_delete=models.CASCADE)
   published_on = models.DateTimeField(auto_now_add=True)
-  project_image = models.ImageField(upload_to = 'projects/')
+  project_image = CloudinaryField('image')
   repo_link = models.CharField(max_length=100)
   live_link = models.CharField(max_length=100)
 
