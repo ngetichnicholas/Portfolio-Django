@@ -7,17 +7,22 @@
   <!-- Looping through projects   -->
   {% for projects_item in projects %}
 
-  <div class="row">
+  <div class="row project">
+    <div class="col-md-1"></div>
     <!-- displaying projects projects -->
-    <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
-      <h2 class="text-center"> {{ projects_item.title }} </h2>
+    <div class="col-md-4">
+      <h2 class="text-success"> {{ projects_item.title }} </h2>
+      <p>{{ projects_item.description}}</p>
+      <P>Repository Link: <a href="{{projects_item.repo_link}}">{{projects_item.repo_link}}</a></P>
+      <P>Live Link: <a href="{{projects_item.live_link}}">{{projects_item.live_link}}</a></P>
+      <p>Posted on: {{ projects_item.published_on}}</p>
     </div>
 
     <!--Display projects project images  -->
-    <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
+    <div class="col-md-6">
       <img src="{{projects_item.project_image.url}}" class="img-responsive" alt="Image">
     </div>
-
+    <div class="col-md-1"></div>
   </div>
 
   {% empty %}

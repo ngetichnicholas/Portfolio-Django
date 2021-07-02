@@ -23,6 +23,9 @@ class Project(models.Model):
   author = models.ForeignKey(Author)
   published_on = models.DateTimeField(auto_now_add=True)
   project_image = models.ImageField(upload_to = 'projects/')
+  repo_link = models.CharField(max_length=100)
+  live_link = models.CharField(max_length=100)
+
 
   def __str__(self):
       return self.title
