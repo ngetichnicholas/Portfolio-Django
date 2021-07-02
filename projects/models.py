@@ -20,7 +20,7 @@ class Author(models.Model):
 class Project(models.Model):
   title = models.CharField(max_length=60)
   description  = models.TextField()
-  author = models.ForeignKey(Author)
+  author = models.ForeignKey(Author,on_delete=models.CASCADE)
   published_on = models.DateTimeField(auto_now_add=True)
   project_image = models.ImageField(upload_to = 'projects/')
   repo_link = models.CharField(max_length=100)
