@@ -16,7 +16,7 @@ import cloudinary.uploader
 import cloudinary.api
 
 cloudinary.config(
-    cloud_name = config('cloud_name'),
+    cloud_name ='dbos9xidr',
     api_key=config('api_key'), 
     api_secret=config('api_secret'),
     secure = config('secure'),
