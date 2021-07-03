@@ -9,7 +9,6 @@ nav {
 }
 nav a {
   color: #FFEFA1 !important;
-  font-size: 25px;
 }
 a {
   color: blue;
@@ -41,5 +40,5 @@ img {
   width: 100%;
 }
 body {
-  font-size: 25px;
+  font-size: 20px;
 }
