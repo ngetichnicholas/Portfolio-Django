@@ -15,12 +15,12 @@ import cloudinary
 import cloudinary.uploader
 import cloudinary.api
 
-# cloudinary.config(
-#     cloud_name = config('CLOUD_NAME'),
-#     api_key=config('API_KEY'), 
-#     api_secret=config('API_SECRET'),
-#     secure = config('SECURE'),
-# )
+cloudinary.config(
+    cloud_name = config('cloud_name'),
+    api_key=config('api_key'), 
+    api_secret=config('api_secret'),
+    secure = config('secure'),
+)
 
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
