@@ -9,7 +9,7 @@ def home(requst):
   return render(requst, 'index.html')
 
 def projects(request):
-  projects = Project.objects.all().order_by("-published_on")
+  projects = Project.objects.all()
   return render(request, 'projects.html', {'projects':projects})
 
 def detail(request,project_id):
