@@ -3,7 +3,6 @@ table {
   margin: 2rem;
 }
 body {
-  background-color: #A4A6AA;
   font-size: 25px;
   font-family: 'Times New Roman', Times, serif;
 }
@@ -118,10 +117,12 @@ form {
   #hero {
     width: 100%;
     height: 100vh;
-    background: url("../images/windows2.jpg") top center !important;
+    background: url("../images/windows2.jpg") !important;
     background-size: cover !important;
     background-repeat: no-repeat !important;
   }
+  
+
   #header,#footer {
     background-color: #00171f !important;
   }
