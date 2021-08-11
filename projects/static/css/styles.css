@@ -3,7 +3,7 @@ table {
   margin: 2rem;
 }
 body {
-  background-color: antiquewhite;
+  background-color: #A4A6AA;
   font-size: 25px;
   font-family: 'Times New Roman', Times, serif;
 }
@@ -37,66 +37,7 @@ form {
 .btn {
   font-size: 25px;
 }
-.approved {
-  background-color: #258DC0;
-  color: white;
-  text-decoration: none;
-  padding: 15px 26px;
-  position: relative;
-  display: inline-block;
-  border-radius: 2px;
-}
 
-.notification,.all-patients {
-  background-color: #258DC0;
-  color: white;
-  text-decoration: none;
-  padding: 15px 26px;
-  position: relative;
-  display: inline-block;
-  border-radius: 2px;
-}
-
-.notification:hover {
-  background: white;
-}
-
-.notification .badge {
-  position: absolute;
-  top: -10px;
-  right: -10px;
-  padding: 9px 15px;
-  border-radius: 50%;
-  background-color: red;
-  color: white;
-}
-.approved .badge2 {
-  position: absolute;
-  top: -10px;
-  right: -10px;
-  padding: 2px 15px;
-  border-radius: 50%;
-  background-color: rgb(19, 185, 69);
-  color: white;
-}
-.all-patients .badge3 {
-  position: absolute;
-  top: -10px;
-  right: -10px;
-  padding: 2px 10px;
-  border-radius: 50%;
-  background-color: rgb(26, 91, 231);
-  color: white;
-}
-.feedback .badge4 {
-  position: absolute;
-  top: -10px;
-  right: -10px;
-  padding: 2px 15px;
-  border-radius: 50%;
-  background-color: rgb(26, 91, 231);
-  color: white;
-}
 .btns {
   width: 5cm;
 }
@@ -167,56 +108,20 @@ form {
     color: blue;
     font-weight: 900;
   }
-  .footer {
-    background-color: #4D6075 !important;
-    color: #FFEFA1 !important;
-  }
-  .footer a {
-    color: #FFEFA1 !important;
-  }
+  
   img {
     width: 100%;
   }
   body {
     font-size: 20px;
   }
-
-  #banner {
-    background-image: url('../images/windows2.jpg');
-    opacity: 0.9;
-    background-repeat: no-repeat;
-    background-size: cover;
-    height: 1080px;
-    text-align: center;
+  #hero {
+    width: 100%;
+    height: 100vh;
+    background: url("../images/windows2.jpg") top center !important;
+    background-size: cover !important;
+    background-repeat: no-repeat !important;
   }
-  #profile {
-    float: left;
-    padding-left: 40px;
-  }
-  #profile img {
-    height: 600px;
-    margin-top: 160px;
-    width: 600px;
-    border-radius: 300px;
-  }
-
-  #launcher {
-    padding-top: 400px;
-    float: right;
-    margin-right: 100px;
-    text-align: center;
-    align-items: center;
-  }
-  #launcher h1 {
-    background-color: #006D77;
-    border:solid 8px #83c5be;
-    color: white;
-    padding: 10px 10px 10px 10px;
-    text-align: center;
-    text-decoration: none;
-    display: inline-block;
-    font-size: 28px;
-    margin: 4px 4px;
-    cursor: pointer;
-    border-radius: 8px;
+  #header,#footer {
+    background-color: #00171f !important;
   }

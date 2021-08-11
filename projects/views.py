@@ -20,18 +20,18 @@ def contact(requst):
 def about(requst):
   return render(requst, 'about.html')
 
-def projects(request):
+def portfolio(request):
   projects = Project.objects.all()
   return render(request, 'projects.html', {'projects':projects})
 
-def detail(request,project_id):
+def detail(request,portfolio_id):
   try:
-    project = get_object_or_404(Project, pk = project_id)
+    portfolio = get_object_or_404(Project, pk = portfolio_id)
   except ObjectDoesNotExist:
     raise Http404()
-  return render(request, 'project.html', {'project':project})
+  return render(request, 'portfolio.html', {'portfolio':portfolio})
 
-def search_projects(request):
+def search_portfolio(request):
   if 'project' in request.GET and request.GET["project"]:
     search_term = request.GET.get("project")
     searched_projects = Project.search_project_title(search_term)
