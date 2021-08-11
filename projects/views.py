@@ -8,6 +8,18 @@ from django.core.exceptions import ObjectDoesNotExist
 def home(requst):
   return render(requst, 'index.html')
 
+def resume(requst):
+  return render(requst, 'resume.html')
+
+def services(requst):
+  return render(requst, 'services.html')
+
+def contact(requst):
+  return render(requst, 'contact.html')
+
+def about(requst):
+  return render(requst, 'about.html')
+
 def projects(request):
   projects = Project.objects.all()
   return render(request, 'projects.html', {'projects':projects})
