@@ -5,19 +5,32 @@
 <html lang="en">
 
 <head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <link rel="icon" href="https://res.cloudinary.com/dbos9xidr/image/upload/v1626082454/as8ixvziyd2bq9i5yqzl.jpg">
-  <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
-  <link href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700,800,900" rel="stylesheet">
-  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
-  <link rel="stylesheet" href="../static/css/style.css">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+
   {% if title %}
   <title>{{title}}</title>
   {% else %}
-  <title>Portfolio </title>
-  {% endif %}
+  <title>Nick | Portfolio </title>
+  {% endif %}  <meta content="" name="description">
+  <meta content="" name="keywords">
+
+  <!-- Favicons -->
+  <link rel="icon" href="https://res.cloudinary.com/dbos9xidr/image/upload/v1626082454/as8ixvziyd2bq9i5yqzl.jpg">
+  <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
+
+  <!-- Vendor CSS Files -->
+  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="assets/vendor/icofont/icofont.min.css" rel="stylesheet">
+  <link href="assets/vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
+  <link href="assets/vendor/venobox/venobox.css" rel="stylesheet">
+  <link href="assets/vendor/owl.carousel/assets/owl.carousel.min.css" rel="stylesheet">
+  <link href="assets/vendor/aos/aos.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://res.cloudinary.com/dbos9xidr/raw/upload/v1628668395/portfolio-style.css">
 
   {% block styles %}
   {% bootstrap_css %}
@@ -26,43 +39,35 @@
 </head>
 
 <body>
-
-  <div class="wrapper d-flex align-items-stretch">
-    <nav id="sidebar">
-      <div class="custom-menu">
-        <button type="button" id="sidebarCollapse" class="btn btn-primary">
-          <i class="fa fa-bars"></i>
-          <span class="sr-only">Toggle Menu</span>
-        </button>
-      </div>
-      <ul class="list-unstyled components mb-5">
-        <li class="active">
-          <a href="{% url 'home' %}"><i class="fas fa-home"></i> Home</a>
-        </li>
-        <li class="active">
-            <a href="{% url 'allProjects' %}"><i class="fas fa-book"></i> Portfolio</a>
-        </li>
-      </ul>
-
-    </nav>
-
-      <!-- Page Content  -->
-    <div id="content" class="p-4 p-md-5 pt-5">
-      {% block content %}
-      {% endblock content %}
-    </div>
-  </div>
-  <div class="container-fluid footer text-center ">
-    <a href="" target="_blank" >© 2021 - Nicholas Ngetich.Porfolio</a>
-
-  </div>
-
+  {% block content %}
+  {% endblock content %}
   {% block scripts %}
-  <script src="../static/js/jquery.min.js"></script>
-  <script src="../static/js/popper.js"></script>
-  <script src="../static/js/bootstrap.min.js"></script>
-  <script src="../static/js/main.js"></script>
-  {% bootstrap_javascript %}
+  <!-- ======= Footer ======= -->
+  <footer id="footer">
+    <div class="container">
+      <div class="copyright">
+        &copy; Copyright <strong><span>Nicholas Ngetich</span></strong>
+      </div>
+    </div>
+  </footer><!-- End  Footer -->
+
+  <a href="#" class="back-to-top"><i class="icofont-simple-up"></i></a>
+
+  <!-- Vendor JS Files -->
+  <script src="{% static 'js/jquery/jquery.min.js' %}"></script>
+  <script src="{% static 'js/bootstrap/js/bootstrap.bundle.min.js' %}"></script>
+  <script src="{% static 'js/jquery.easing/jquery.easing.min.js' %}"></script>
+  <script src="{% static 'js/php-email-form/validate.js' %}"></script>
+  <script src="{% static 'js/waypoints/jquery.waypoints.min.js' %}"></script>
+  <script src="{% static 'js/counterup/counterup.min.js' %}"></script>
+  <script src="{% static 'js/isotope-layout/isotope.pkgd.min.js' %}"></script>
+  <script src="{% static 'js/venobox/venobox.min.js' %}"></script>
+  <script src="{% static 'js/owl.carousel/owl.carousel.min.js' %}"></script>
+  <script src="{% static 'js/typed.js' %}/typed.min.js' %}"></script>
+  <script src="{% static 'js/aos/aos.js' %}"></script>
+
+  <!-- Template Main JS File -->
+  <script src="{% static 'js/main.js' %}"></script>
   {% endblock scripts %}
 </body>
 
