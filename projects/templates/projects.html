@@ -17,7 +17,7 @@
                 <div class="portfolio-wrap">
                   <img src="{{projects_item.project_image.url}}" class="img-fluid" alt="">
                   <div class="portfolio-links">
-                    <a href="{% url 'portfolio_details' projects_item.id %}" title="More Details">{{projects_item.title}}</a>
+                    <a href="{% url 'portfolio_details' projects_item.id %}" title="More Details">{{projects_item.title|truncatechars:15 }}</a>
                   </div>
                 </div>
               </div>
