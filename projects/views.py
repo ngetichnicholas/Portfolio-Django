@@ -21,7 +21,7 @@ def about(requst):
   return render(requst, 'about.html')
 
 def portfolio(request):
-  projects = Project.objects.all()
+  projects = Project.objects.all().order_by('-published_on')
   return render(request, 'projects.html', {'projects':projects})
 
 def detail(request,portfolio_id):
