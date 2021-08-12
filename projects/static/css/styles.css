@@ -126,3 +126,29 @@ form {
   #header,#footer {
     background-color: #00171f !important;
   }
+  .live-link:hover {
+    background-color: #062036;
+    color: white;
+    border-radius: 8px;
+  }
+  .link {
+    margin: 1rem 0 1rem 0 !important;
+  }
+  .link {
+    color: #00171f;
+    background-color: white;
+    font-weight: 900;
+    border: 2px solid #00171f;
+    border-radius: 8px;
+
+  }
+  .live {
+    text-align: center;
+    align-items: center;
+  }
+  h1, h2 {
+    color: #00171f;
+  }
+  .page-container {
+    margin-top: 5vh;
+  }
