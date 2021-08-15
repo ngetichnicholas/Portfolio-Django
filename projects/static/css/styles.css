@@ -5,9 +5,7 @@ table {
 body {
   font-size: 25px;
   font-family: 'Times New Roman', Times, serif;
-}
-tr,form {
-  background-color: #65CBF1;
+  background-color: #93b0c5;
 }
 form {
   padding: 2rem;
@@ -124,7 +122,7 @@ form {
   
 
   #header,#footer {
-    background-color: #00171f !important;
+    background-color: #003b36 !important;
   }
   .live-link:hover {
     background-color: #062036;
@@ -152,3 +150,10 @@ form {
   .page-container {
     margin-top: 5vh;
   }
+  tr, form {
+    background-color: #003b36 !important;
+    color: white !important;
+}
+.section-bg {
+  background: #d6e3f8
+}

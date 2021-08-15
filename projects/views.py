@@ -3,6 +3,9 @@ from django.http import HttpResponse, Http404
 import datetime as dt
 from .models import Project
 from django.core.exceptions import ObjectDoesNotExist
+from .email import *
+from django.contrib import messages
+from .forms import *
 
 # Create your views here.
 def home(requst):
@@ -14,8 +17,20 @@ def resume(requst):
 def services(requst):
   return render(requst, 'services.html')
 
-def contact(requst):
-  return render(requst, 'contact.html')
+def contact(request):
+    name = request.POST.get('name')
+    email = request.POST.get('email')
+    message = request.POST.get('message')
+    if request.method == 'POST':
+      contact_form = ContactForm(request.POST)
+      if contact_form.is_valid():
+        contact_form.save()
+        send_contact_email(name, email)
+        data = {'success': 'Your message has been reaceived. Thank you for contacting us, we will get back to you shortly'}
+        messages.info(request, f"Message submitted successfully")
+    else:
+      contact_form = ContactForm()
+    return render(request,'contact.html',{'contact_form':contact_form})
 
 def about(requst):
   return render(requst, 'about.html')
